@@ -41,6 +41,7 @@ ul{
 
 /* headerLogo */
 #headerlogo{ height: 150px;
+    margin-left: 5%;
 }
 
 /* Nav menu */
