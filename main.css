@@ -35,13 +35,12 @@ ul{
     background-color:transparent;
     box-shadow: none;
     position: relative ;
-    top: 0;
     width: 100%;
 }
 
 /* headerLogo */
 #headerlogo{ height: 150px;
-    margin-left: 2%;
+    
 }
 
 /* Nav menu */
@@ -168,8 +167,8 @@ ul{
 @media (min-width: 768px) {
     .nav{
         max-height: none;
-        top: 0;
-        position: relative;
+        top:0px;
+        position: relative ;
         float: right;
         width: fit-content;
         background: transparent;
@@ -222,24 +221,16 @@ h1{
 }
 
  iframe {
-  position: relative;
+  position: absolute;
   margin-top: 360px;
   left: 50%;
   width: 100vw;
-  height: 100vh;
+  height: 50vh;
   transform: translate(-50%, -50%);
   pointer-events: none;
    border: none;
 }
 
-#text{
-  position:relative ;
-  color: #FFFFFF;
-  margin-top: -450px;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
 
 @media (min-aspect-ratio: 16/9) {
   .video-container iframe {
@@ -255,4 +246,3 @@ h1{
 #homemain {margin-top:520px; border: none;}
 /*footer*/
 #footerlogo {height: 100px;}
-
