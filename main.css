@@ -31,7 +31,7 @@ ul{
 
 /* Header */
 .header{
-    background-color:transparent;
+    background-color: transparent;
     box-shadow: none;
     position: relative ;
     width: 100%;
@@ -203,10 +203,14 @@ ul{
     .subnav-content a:hover {color: var(--black);}
 }
 /*video*/
-@import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,700");
-body{
-  overflow-x: hidden;
-  font-family: Roboto, sans-serif;
+.intro{
+height: 100%;
+width: 100%;
+position: static;
+z-index: -1;
+margin-top: -155px;
+left 0;
+object-fit: cover;
 }
 
 h1{
@@ -214,34 +218,6 @@ h1{
   padding: 10px;
 }
 
-.video-container{
-  width: 100vw;
-  height: 100vh;
-}
-
- iframe {
-  position: absolute;
-  margin-top: 360px;
-  left: 50%;
-   right:50%; 
-  width: 100vw;
-  height: 50vh;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-   border: none;
-}
-
-
-@media (min-aspect-ratio: 16/9) {
-  .video-container iframe {
-    height: 56.25vw;
-  }
-}
-@media (max-aspect-ratio: 16/9) {
-  .video-container iframe {
-    width: 177.78vh;
-  }
-}
 
 #homemain{
   font-family: "arial";
