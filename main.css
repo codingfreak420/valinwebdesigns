@@ -235,7 +235,7 @@ h1{
 #text{
   position:relative ;
   color: #FFFFFF;
-  margin-top: -370px;
+  margin-top: -450px;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -255,3 +255,4 @@ h1{
 #homemain {margin-top:520px; border: none;}
 /*footer*/
 #footerlogo {height: 100px;}
+
