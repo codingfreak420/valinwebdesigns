@@ -224,6 +224,7 @@ h1{
   position: absolute;
   margin-top: 360px;
   left: 50%;
+   right:50%; 
   width: 100vw;
   height: 50vh;
   transform: translate(-50%, -50%);
