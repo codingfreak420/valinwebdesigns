@@ -1,226 +1,266 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
- <style media="screen">
-      *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body{
-    font-family: sans-serif;
-}
-footer{
-    position: relative;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: auto;
-    width: 100vw;
-    padding-top: 40px;
-    color: var(--lgreen);
-    background: linear-gradient(var(--grey),var(--black)12%)
-}
-.footer-content{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-}
-.footer-content h3{
-    font-size: 2.1rem;
-    font-weight: 500;
-    text-transform: capitalize;
-    line-height: 3rem;
-}
-.footer-content p{
-    max-width: 500px;
-    margin: 10px auto;
-    line-height: 28px;
-    font-size: 14px;
-    color: #cfd2d6;
-}
-.socials{
-    list-style: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 1rem 0 3rem 0;
-}
-.socials li{
-    margin: 0 10px;
-}
-.socials a{
-    text-decoration: none;
-    color: var(--lgreen);
-    border: 1.1px solid green;
-    padding: 5px;
+  <style media="screen">
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-    border-radius: 50%;
+    body {
+      font-family: sans-serif;
+    }
 
-}
-.socials a i{
-    font-size: 1.1rem;
-    width: 20px;
+    footer {
+      position: relative;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: auto;
+      width: 100vw;
+      padding-top: 40px;
+      color: var(--lgreen);
+      background: linear-gradient(var(--grey), var(--black)12%)
+    }
 
+    .footer-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+    }
 
-    transition: color .4s ease;
+    .footer-content h3 {
+      font-size: 2.1rem;
+      font-weight: 500;
+      text-transform: capitalize;
+      line-height: 3rem;
+    }
 
-}
-.socials a:hover i{
-    color: green;
-}
+    .footer-content p {
+      max-width: 500px;
+      margin: 10px auto;
+      line-height: 28px;
+      font-size: 14px;
+      color: #cfd2d6;
+    }
 
-.footer-bottom{
-    background: #000;
-    width: 100vw;
-    padding: 20px;
-    padding-bottom: 40px;
-    text-align: center;
-}
-.footer-bottom p{
-float: left;
-    font-size: 14px;
-    word-spacing: 2px;
-    text-transform: capitalize;
-}
-.footer-bottom p a{
-  color:green;
-  font-size: 16px;
-  text-decoration: none;
-}
-.footer-bottom span{
-    text-transform: uppercase;
-    opacity: .4;
-    font-weight: 200;
-}
-.footer-menu{
-  float: right;
-  text-align: center;
+    .socials {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 1rem 0 3rem 0;
+    }
 
-}
-.footer-menu ul{
-  display: flex;
-  
-}
-.footer-menu ul li{
-padding-right: 10px;
-display: block;
-}
-.footer-menu ul li a{
-  color: var(--lgreen);
-  text-decoration: none;
-}
-.footer-menu ul li a:hover{
-  color: green;
-}
+    .socials li {
+      margin: 0 10px;
+    }
 
-@media (max-width: 580px){
-  .footer-bottom {height: auto;}
-  .footer-bottom p {float: none; margin-top: 15px}
-  .footer-menu {float: none; display: inline-block;}
-  
-}
-@media (max-width:500px) {
-.footer-menu ul{
-  display: flex;}
-  
-}
-    </style>
+    .socials a {
+      text-decoration: none;
+      color: var(--lgreen);
+      border: 1.1px solid green;
+      padding: 5px;
+
+      border-radius: 50%;
+
+    }
+
+    .socials a i {
+      font-size: 1.1rem;
+      width: 20px;
 
 
+      transition: color .4s ease;
 
-    <!-- App title -->
-    <title>Responsive Pure CSS Menu</title>
+    }
 
-    <!-- Link css file -->
-    <link rel="stylesheet" href="main.css">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    .socials a:hover i {
+      color: green;
+    }
+
+    .footer-bottom {
+      background: #000;
+      width: 100vw;
+      padding: 20px;
+      padding-bottom: 40px;
+      text-align: center;
+    }
+
+    .footer-bottom p {
+      float: left;
+      font-size: 14px;
+      word-spacing: 2px;
+      text-transform: capitalize;
+    }
+
+    .footer-bottom p a {
+      color: green;
+      font-size: 16px;
+      text-decoration: none;
+    }
+
+    .footer-bottom span {
+      text-transform: uppercase;
+      opacity: .4;
+      font-weight: 200;
+    }
+
+    .footer-menu {
+      float: right;
+      text-align: center;
+
+    }
+
+    .footer-menu ul {
+      display: flex;
+
+    }
+
+    .footer-menu ul li {
+      padding-right: 10px;
+      display: block;
+    }
+
+    .footer-menu ul li a {
+      color: var(--lgreen);
+      text-decoration: none;
+    }
+
+    .footer-menu ul li a:hover {
+      color: green;
+    }
+
+    @media (max-width: 580px) {
+      .footer-bottom {
+        height: auto;
+      }
+
+      .footer-bottom p {
+        float: none;
+        margin-top: 15px
+      }
+
+      .footer-menu {
+        float: none;
+        display: inline-block;
+      }
+
+    }
+
+    @media (max-width:500px) {
+      .footer-menu ul {
+        display: flex;
+      }
+
+    }
+  </style>
+
+
+
+  <!-- App title -->
+  <title>Responsive Pure CSS Menu</title>
+
+  <!-- Link css file -->
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
 <body>
-    
-    <!-- Navigation bar -->
-    
-    <!-- Main content -->
-    <main>
-        <article>
-            <div class="video-container">
-  <iframe src="https://www.youtube.com/embed/xsZZrfUbKIc?controls=0&autoplay=1&mute=1&playsinline=1&loop=1&playlist=xsZZrfUbKIc"></iframe>
-</div>
 
-<div id="text">
-  <header class="header">
-        <!-- Logo -->
-        <a href="#" class="logo"><img src="https://raw.githubusercontent.com/codingfreak420/basecompany/main/2936BE7F-0836-46F7-9CF8-EE902D1DB1B4-PhotoRoom.png-PhotoRoom.png" id="headerlogo"/></a>
+  <!-- Navigation bar -->
 
-        <!-- Hamburger icon -->
-        <input class="side-menu" type="checkbox" id="side-menu"/>
-        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+  <!-- Main content -->
+  <main>
+    <article>
+      
+      <div class="video-container">
+        <iframe
+          src="https://www.youtube.com/embed/xsZZrfUbKIc?controls=0&autoplay=1&mute=1&playsinline=1&loop=1&playlist=xsZZrfUbKIc"></iframe>
+     <header class="header">
+        
+          <!-- Logo -->
+          <a href="#" class="logo"><img
+              src="https://raw.githubusercontent.com/codingfreak420/basecompany/main/2936BE7F-0836-46F7-9CF8-EE902D1DB1B4-PhotoRoom.png-PhotoRoom.png"
+              id="headerlogo" /></a>
 
-        <!-- Menu -->
-        <nav class="nav">
+          <!-- Hamburger icon -->
+          <input class="side-menu" type="checkbox" id="side-menu" />
+          <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+
+          <!-- Menu -->
+          <nav class="nav">
             <ul class="menu">
-                <li><a href="#">Gallery</a></li>
-                <li><a href="#">Blog</a> </li>
-                <li><a href="#">About</a></li>
-                <li class="subnav">
-                    <p class="subnavbtn">Contact <i class="fa fa-caret-down"></i></p>
-                    <div class="subnav-content">
-                        <a href="#">Email</a>
-                        <a href="#">Twitter</a>
-                        <a href="#">Phone</a>
-                    </div>
-                </li>
-                <li class="subnav">
-                    <p class="subnavbtn">Contact <i class="fa fa-caret-down"></i></p>
-                    <div class="subnav-content">
-                        <a href="#">Email</a>
-                        <a href="#">Twitter</a>
-                        <a href="#">Phone</a>
-                    </div>
-                </li>
+              <li><a href="#">Gallery</a></li>
+              <li><a href="#">Blog</a> </li>
+              <li><a href="#">About</a></li>
+              <li class="subnav">
+                <p class="subnavbtn">Contact <i class="fa fa-caret-down"></i></p>
+                <div class="subnav-content">
+                  <a href="#">Email</a>
+                  <a href="#">Twitter</a>
+                  <a href="#">Phone</a>
+                </div>
+              </li>
+              <li class="subnav">
+                <p class="subnavbtn">Contact <i class="fa fa-caret-down"></i></p>
+                <div class="subnav-content">
+                  <a href="#">Email</a>
+                  <a href="#">Twitter</a>
+                  <a href="#">Phone</a>
+                </div>
+              </li>
             </ul>
-        </nav>
-    </header>
-  
-</div>
-         <div>
-    <fieldset id='homemain'>next section for reference</fieldset>
-  </div> 
-            
-        </article>
+          </nav>
+        
 
-    </main>
+      </div>
+       </header>
+      <div>
+        <fieldset id='homemain'>next section for reference</fieldset>
+      </div>
+
+    </article>
+
+  </main>
   <footer>
-        <div class="footer-content">
-          <a href='#' class='footerlogo'><h3><img src='https://raw.githubusercontent.com/codingfreak420/basecompany/main/2936BE7F-0836-46F7-9CF8-EE902D1DB1B4-PhotoRoom.png-PhotoRoom.png' id='footerlogo' /></h3></a>
-            <p>We are proud to serve our community.</p>
-            <ul class="socials">
-                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
-            </ul>
-        </div>
-        <div class="footer-bottom">
-            <p>copyright &copy; <a href="#">Valin Web Development</a></p>
-                    <div class="footer-menu">
-                      <ul class="f-menu">
-                        <li><a href="">Home</a></li>
-                        <li><a href="">About</a></li>
-                        <li><a href="">Contact</a></li>
-                        <li><a href="">Blog</a></li>
-                      </ul>
-                    </div>
-        </div>
+    <div class="footer-content">
+      <a href='#' class='footerlogo'>
+        <h3><img
+            src='https://raw.githubusercontent.com/codingfreak420/basecompany/main/2936BE7F-0836-46F7-9CF8-EE902D1DB1B4-PhotoRoom.png-PhotoRoom.png'
+            id='footerlogo' /></h3>
+      </a>
+      <p>We are proud to serve our community.</p>
+      <ul class="socials">
+        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+        <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+      </ul>
+    </div>
+    <div class="footer-bottom">
+      <p>copyright &copy; <a href="#">Valin Web Development</a></p>
+      <div class="footer-menu">
+        <ul class="f-menu">
+          <li><a href="">Home</a></li>
+          <li><a href="">About</a></li>
+          <li><a href="">Contact</a></li>
+          <li><a href="">Blog</a></li>
+        </ul>
+      </div>
+    </div>
 
-    </footer>
+  </footer>
 </body>
+
 </html>
