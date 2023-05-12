@@ -243,6 +243,33 @@ h1{
   }
 }
 
-#homemain {margin-top:520px; border: none;}
+#homemain{
+  font-family: "arial";
+  font-size: 24px;
+  text-align: center; margin-top: -400px; border: none;
+  position: absolute;
+}
+
+h1 {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  border-right: 2px solid;
+  animation: typing 1.5s steps(30, end) forwards, blinking 1s infinite;
+  background-color: transparent;
+  color: var(--green);
+  text-align: center;
+}
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blinking {
+  0% {border-right-color: transparent}
+  50% {border-right-color: var(--green)}
+  100% {border-right-color: transparent}
+}
+
 /*footer*/
 #footerlogo {height: 100px;}
