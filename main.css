@@ -32,9 +32,9 @@ ul{
 
 /* Header */
 .header{
-    background-color: var(--black);
-    box-shadow: 1px 1px 5px 0px var(--black);
-    position: sticky;
+    background-color:transparent;
+    box-shadow: none;
+    position: relative ;
     top: 0;
     width: 100%;
 }
@@ -222,18 +222,20 @@ h1{
 }
 
  iframe {
-  position: absolute;
-  top: 50%;
+  position: relative;
+  margin-top: 360px;
   left: 50%;
   width: 100vw;
   height: 100vh;
   transform: translate(-50%, -50%);
   pointer-events: none;
+   border: none;
 }
 
 #text{
-  position: absolute;
+  position:relative ;
   color: #FFFFFF;
+  margin-top: -370px;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -249,5 +251,7 @@ h1{
     width: 177.78vh;
   }
 }
+
+#homemain {margin-top:520px; border: none;}
 /*footer*/
 #footerlogo {height: 100px;}
