@@ -1,265 +1,347 @@
-<!DOCTYPE html>
-<html lang="en">
+/* Theming */
+html {background: }
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no">
+:root{
+    --green: #02b345;
+    --black: #070304;
+    --grey: #36383F;
+    --lgreen:  #e1edbd;
+}
+/* Reset */
+*{ 
+    margin: auto;
+    padding: 0;
+    box-sizing:  border-box;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+    color: var(--lgreen);
+    background: linear-gradient(var(--black)60%,var(--grey)50%);
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+/* Header */
+.header{
+    background-color: transparent;
+    box-shadow: none;
+    position: sticky ;
+    width: 100%;
+}
+
+/* headerLogo */
+#headerlogo{ height: 150px;
+    
+}
+
+/* Nav menu */
+.nav{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: linear-gradient(135deg,var(--grey),var(--black)60%);
+    position: fixed;
+    
+}
+
+.menu a,.menu p{
+    display: block;
+    padding: 30px;
+    color: var(--green);
+    margin-top: 25px;
+
+}
+
+.menu a:hover{
+    background-color: var(--black);
+    width: 60%;
+    margin-left: 20%;
+    border-radius: 9px;
+    text-align: center;
+    color: var(--lgreen);
+}
+
+.nav{
+    max-height: 0;
+    transition: max-height .5s ease-out;
+}
+
+/* Sub nav */
+.subnav-content {
+    width: 70%;
+    z-index: 1;
+    padding: 20px 0 ;
+    display: none;
+    border-radius: 9px;
+    margin-left: 15%;
+    background: linear-gradient(var(--green),var(--lgreen))
+
+  }
+.subnav-content a {
+    color: var(--black);
+    text-decoration: none;
+    padding: 0;
+    margin: 10px 0;
+    text-align: center;
+}
+.subnav:hover .subnav-content {
+    display: block;
+}
+
+/* Menu Icon */
+
+.hamb{
+    cursor: pointer;
+    float: right;
+    padding: 40px 20px;
+}
 
 
-  <style media="screen">
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+.hamb-line {
+    background: var(--green);
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 24px;
+    margin-top: 30px;
+    
+}
+
+.hamb-line::before,
+.hamb-line::after{
+    background: var(--green);
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+.hamb-line::before{
+    top: 5px;
+}
+
+.hamb-line::after{
+    top: -5px;
+}
+
+
+.side-menu {
+    display: none;
+}
+
+/* Toggle menu icon */
+
+.side-menu:checked ~ nav{
+    max-height: 100%;
+}
+
+.side-menu:checked ~ .hamb .hamb-line {
+    background: transparent;
+}
+
+.side-menu:checked ~ .hamb .hamb-line::before {
+    transform: rotate(-45deg);
+    top:0;
+
+}
+
+.side-menu:checked ~ .hamb .hamb-line::after {
+    transform: rotate(45deg);
+    top:0;
+}
+
+
+/* Responsiveness */
+
+@media (min-width: 768px) {
+    .nav{
+        max-height: none;
+        top:0px;
+        position: relative ;
+        float: right;
+        width: fit-content;
+        background: transparent;
+
     }
 
-    body {
-      font-family: sans-serif;
+    .menu li{
+        float: left;
     }
 
-    footer {
-      position: relative;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: auto;
-      width: 100vw;
-      padding-top: 30px;
-      color: var(--lgreen);
-      background: linear-gradient(var(--grey), var(--black)12%)
-    }
-
-    .footer-content {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      text-align: center;
-    }
-
-    .footer-content h3 {
-      font-size: 2.1rem;
-      font-weight: 500;
-      text-transform: capitalize;
-      line-height: 3rem;
-    }
-
-    .footer-content p {
-      max-width: 500px;
-      margin: 10px auto;
-      line-height: 28px;
-      font-size: 14px;
-      color: #cfd2d6;
-    }
-
-    .socials {
-      list-style: none;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 1rem 0 3rem 0;
-    }
-
-    .socials li {
-      margin: 0 10px;
-    }
-
-    .socials a {
-      text-decoration: none;
-      color: var(--lgreen);
-      border: 1.1px solid green;
-      padding: 5px;
-
-      border-radius: 50%;
-
-    }
-
-    .socials a i {
-      font-size: 1.1rem;
-      width: 20px;
-
-
-      transition: color .4s ease;
-
-    }
-
-    .socials a:hover i {
-      color: green;
-    }
-
-    .footer-bottom {
-      background: #000;
-      width: 100vw;
-      padding: 20px;
-      padding-bottom: 40px;
-      text-align: center;
-    }
-
-    .footer-bottom p {
-      float: left;
-      font-size: 14px;
-      word-spacing: 2px;
-      text-transform: capitalize;
-    }
-
-    .footer-bottom p a {
-      color: green;
-      font-size: 16px;
-      text-decoration: none;
-    }
-
-    .footer-bottom span {
-      text-transform: uppercase;
-      opacity: .4;
-      font-weight: 200;
-    }
-
-    .footer-menu {
-      float: right;
-      text-align: center;
-
-    }
-
-    .footer-menu ul {
-      display: flex;
-
-    }
-
-    .footer-menu ul li {
-      padding-right: 10px;
-      display: block;
-    }
-
-    .footer-menu ul li a {
-      color: var(--lgreen);
-      text-decoration: none;
-    }
-
-    .footer-menu ul li a:hover {
-      color: green;
-    }
-
-    @media (max-width: 580px) {
-      .footer-bottom {
-        height: auto;
-      }
-
-      .footer-bottom p {
-        float: none;
-        margin-top: 15px
-      }
-
-      .footer-menu {
-        float: none;
-        display: inline-block;
-      }
-
-    }
-
-    @media (max-width:500px) {
-      .footer-menu ul {
-        display: flex;
-      }
-
-    }
-  </style>
-
-
-
-  <!-- App title -->
-  <title>Responsive Pure CSS Menu</title>
-
-  <!-- Link css file -->
-  <link rel="stylesheet" href="main.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Share+Tech&family=VT323&display=swap" rel="stylesheet">
-</head>
-
-<body>
-
-  <!-- Navigation bar -->
-
-  <!-- Main content -->
-  <main>
-    <article>
-     <header class="header">
+    .menu a:hover{
+        background-color: transparent;
+        color: var(--lgreen);
+       
         
-          <!-- Logo -->
-          <a href="#" class="logo"><img
-              src="https://raw.githubusercontent.com/codingfreak420/basecompany/main/2936BE7F-0836-46F7-9CF8-EE902D1DB1B4-PhotoRoom.png-PhotoRoom.png"
-              id="headerlogo" /></a>
+    }
+    
+    .hamb{
+        display: none;
+    }
 
-          <!-- Hamburger icon -->
-          <input class="side-menu" type="checkbox" id="side-menu" />
-          <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+        /* Sub nav */
+    .subnav-content {
+        padding: 20px 0 ;
+        display: none;
+        border-radius: 9px;
+        background: linear-gradient(var(--black),var(--green));
+    }
 
-          <!-- Menu -->
-          <nav class="nav">
-            <ul class="menu">
-              <li><a href="#">Gallery</a></li>
-              <li><a href="#">Blog</a> </li>
-              <li><a href="#">About</a></li>
-              <li class="subnav">
-                <p class="subnavbtn">Contact <i class="fa fa-caret-down"></i></p>
-                <div class="subnav-content">
-                  <a href="#">Email</a>
-                  <a href="#">Twitter</a>
-                  <a href="#">Phone</a>
-                </div>
-              </li>
-              <li class="subnav">
-                <p class="subnavbtn">Contact <i class="fa fa-caret-down"></i></p>
-                <div class="subnav-content">
-                  <a href="#">Email</a>
-                  <a href="#">Twitter</a>
-                  <a href="#">Phone</a>
-                </div>
-              </li>
-            </ul>
-          </nav>
-        </header>
-         <video playsinline autoplay muted loop class="intro">
-     <source src="video-cropper.mp4">
-   </video> 
+    .subnav-content a {
+        color:var(--lgreen);
+    }
+    .subnav-content a:hover {color: var(--black);}
+}
+/*video*/
+.intro{
+height: 100%;
+width: 100%;
+position: static;
+z-index: -1;
+margin-top: -50px ;
+left: 0;
+object-fit: cover;
+}
 
-    </article>
-        <fieldset id='homemain'><h1>EXPERIENCE DIGITAL INNOVATION</h1></fieldset>
-    <div class="gradient-border" id="box"><p id="goals">The goal isn’t to build a website. The goal is to build your business. Our commited team understands building your success online can open up your business to new possibilities. With passion, dedication, and a lot of coffee we do our best to bring your message to the world. </p></div>
-    <div id="cyberpunkphoto"><fieldset class="containerglass"><p>Specializing in powerful AI tools to keep your business online portfolio looking fresh and up to date.</p></fieldset>
-     </div> 
-  </main>
-  <footer>
-    <div class="footer-content">
-      <a href='#' class='footerlogo'>
-        <h3><img
-            src='https://raw.githubusercontent.com/codingfreak420/basecompany/main/2936BE7F-0836-46F7-9CF8-EE902D1DB1B4-PhotoRoom.png-PhotoRoom.png'
-            id='footerlogo' /></h3>
-      </a>
-      <p>We are proud to serve our community.</p>
-      <ul class="socials">
-        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-        <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
-      </ul>
-    </div>
-    <div class="footer-bottom">
-      <p>copyright &copy; <a href="#">Valin Web Development</a></p>
-      <div class="footer-menu">
-        <ul class="f-menu">
-          <li><a href="">Home</a></li>
-          <li><a href="">About</a></li>
-          <li><a href="">Contact</a></li>
-          <li><a href="">Blog</a></li>
-        </ul>
-      </div>
-    </div>
+h1{
+  background: rgba(0,0,0,0.5);
+  padding: 10px;
+}
 
-  </footer>
-</body>
 
-</html>
+#homemain{
+  font-size: 40px;
+  text-align: center; margin-top: -100px; border: none;
+  position: absolute;
+  font-family: 'VT323', monospace;
+}
+
+h1 {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  border-right: 2px solid;
+  animation: typing 1.5s steps(30, end) forwards, blinking 1s infinite;
+  background-color: transparent;
+  color: var(--green);
+  text-align: center;
+}
+#goals {font-size: 28px; font-family: 'Share Tech', sans-serif; width: 90%; text-align: justify;}
+#box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 95%;
+  height: 200px;
+  color: white;
+  font-family: 'Raleway';
+  font-size: 2.5rem;
+}
+.gradient-border {
+  --borderWidth: 6px;
+  background: var(--black);
+  position: relative;
+  border-radius: var(--borderWidth);
+}
+.gradient-border:after {
+  content: '';
+  position: absolute;
+  top: calc(-1 * var(--borderWidth));
+  left: calc(-1 * var(--borderWidth));
+  height: calc(100% + var(--borderWidth) * 2);
+  width: calc(100% + var(--borderWidth) * 2);
+  background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+  border-radius: calc(2 * var(--borderWidth));
+  z-index: -1;
+  animation: animatedgradient 3s ease alternate infinite;
+  background-size: 300% 300%;
+}
+
+
+@keyframes animatedgradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }}
+
+@keyframes blinking {
+  0% {border-right-color: transparent}
+  50% {border-right-color: var(--green)}
+  100% {border-right-color: transparent}}
+
+@media(max-width: 1460px){
+  #homemain{margin-top:-90px; }
+}
+@media(max-width: 983px){
+  #homemain{font-size: 30px; width: 50%; margin-top: -70px;} #goals {font-size: 26px;}   
+}
+@media(max-width: 727px){
+#homemain{font-size: 20px;}
+         #goals{font-size: 20px}
+}
+@media(max-width: 520px){
+#homemain{font-size: 15px; margin-top: -43px; }
+  #goals{font-size: 15px;}
+}
+@media(max-width: 400px){
+  #homemain{font-size: 10px; }
+  #goals{font-size: 13x;}
+}
+
+
+/*home3rdsection*/
+#cyberpunkphoto {
+   background-image: url("/cyberpunk.png");
+  background-repeat: no-repeat;
+   height: 400px;
+   width: 100%;
+  margin-top: 10px;
+  background-position: center;
+  background-size: cover ;
+  border-color: var(--black);
+border: none;
+                }
+
+
+.containerglass {
+  border: none;
+  width: 50%;
+  height: 20rem;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2); 
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, .15);
+  backdrop-filter: blur(5px);
+  font-size: 25px;
+  text-align: justify;
+  color: white;
+  position: relative;
+  left: 25%; right: 25%;
+  transform: translate(-50%,-50%);
+  margin-top: -205px;
+}
+.containerglass > p {margin-top: 10px;}
+/*footer*/
+#footerlogo {height: 100px;}
