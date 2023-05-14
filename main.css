@@ -47,16 +47,28 @@ ul{
     width: 100%;
     height: 100%;
     overflow: hidden;
-    background: linear-gradient(135deg,var(--grey),var(--black)60%);
     position: fixed;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2); 
+  border-radius: 20px;
+  background-color: var(--black) ;
+  backdrop-filter: blur(5px);
     
 }
 
 .menu a,.menu p{
     display: block;
     padding: 30px;
-    color: var(--green);
     margin-top: 25px;
+  background:linear-gradient(45deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+  background-size: 200% auto;
+  
+  color: #000;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+  animation:alternate-reverse ease shine 3s infinite;
 
 }
 
@@ -82,11 +94,11 @@ ul{
     display: none;
     border-radius: 9px;
     margin-left: 15%;
-    background: linear-gradient(var(--green),var(--lgreen))
+    background: transparent)
 
   }
 .subnav-content a {
-    color: var(--black);
+    color: var(--green);
     text-decoration: none;
     padding: 0;
     margin: 10px 0;
@@ -102,11 +114,13 @@ ul{
     cursor: pointer;
     float: right;
     padding: 40px 20px;
+  background: transparent;
+  
 }
 
 
 .hamb-line {
-    background: var(--green);
+    background-color: var(--green);
     display: block;
     height: 2px;
     position: relative;
@@ -117,7 +131,7 @@ ul{
 
 .hamb-line::before,
 .hamb-line::after{
-    background: var(--green);
+    background-color: var(--green);
     content: '';
     display: block;
     height: 100%;
@@ -194,11 +208,22 @@ ul{
         padding: 20px 0 ;
         display: none;
         border-radius: 9px;
-        background: linear-gradient(var(--black),var(--green));
+      background:transparent
+ 
+        
     }
 
     .subnav-content a {
-        color:var(--lgreen);
+         background:linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+  background-size: 200% auto;
+  
+  color: #000;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+  animation: shine 3s ease alternate infinite;
     }
     .subnav-content a:hover {color: var(--black);}
 }
@@ -236,13 +261,17 @@ h1 {
   color: var(--green);
   text-align: center;
 }
-#goals {font-size: 28px; font-family: 'Share Tech', sans-serif; width: 90%; text-align: justify; background:linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82); ;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	font: {
-		size: 20vw;
-		family: $font;
-	}; }
+#goals {font-size: 28px; font-family: 'Share Tech', sans-serif; width: 90%; text-align: justify;  background:linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+  background-size: 200% auto;
+  
+  color: #000;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+  animation: shine 3s ease alternate infinite;
+	}
 #box {
   display: flex;
   align-items: center;
@@ -283,6 +312,11 @@ h1 {
 	100% {
 		background-position: 0% 50%;
 	}
+}
+@keyframes shine {
+    to {
+      background-position: 200% center;
+    }
 }
 
 
@@ -349,8 +383,6 @@ h1 {
 .containerglass > p {margin-top: 10px;}
 /*footer*/
 #footerlogo {height: 100px;}
-  
-
 
 
   
