@@ -363,6 +363,81 @@ h1 {
   border-color: var(--black);
                 }
 
+::-webkit-scrollbar{width:2px;height:2px;}
+::-webkit-scrollbar-button{width:2px;height:2px;}
+
+div{
+  box-sizing:border-box;
+}
+
+
+.horizontal-scroll-wrapper{
+  position: relative;
+  display:block;
+  left: -65% ;
+  margin-top: -60px;
+  width:40vh;
+  max-height: 105vw;
+  border: none;
+  background:var(--black);
+  overflow-y:auto;
+  overflow-x:hidden;
+  transform:rotate(-90deg) translateY(-80px);
+  transform-origin:right top;
+}
+.horizontal-scroll-wrapper > div{
+  display:block;
+  
+  background: black;
+  transform:rotate(90deg);
+  transform-origin: right top;
+}
+
+.squares{ top:150px;
+  padding:500px 0 0 0;
+  
+}
+
+.squares > div{
+  width:499px;
+  height:499px;
+  margin: 5px;
+}
+
+.picone img {object-fit: cover
+            width:500px;
+  height:500px;
+             margin: 5px;}
+.pictwo img{object-fit: cover
+            width:500px;
+  height:500px;
+             margin: 5px;}
+.picthree img{object-fit: cover
+            width:500px;
+  height:500px;
+             margin: 5px;}
+.picfour img{object-fit: cover
+            width:500px;
+  height:500px;
+             margin: 5px;}
+.picfive img{object-fit: cover
+            width:500px;
+  height:500px;
+             margin: 5px;}
+.picsix img{object-fit: cover
+            width:500px;
+  height:500px;
+             margin: 5px;}
+.picseven img{object-fit: cover
+            width:500px;
+  height:500px;
+             margin: 5px;}
+.piceight img{object-fit: cover
+            width:500px;
+  height:500px;
+             margin: 5px;}
+
+
 
 .containerglass {
   border: none;
