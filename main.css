@@ -18,7 +18,7 @@ html {background: }
 body{
     font-family: "Poppins", sans-serif;
     color: var(--lgreen);
-    background: linear-gradient(var(--black)60%,var(--grey)50%);
+    background: linear-gradient(var(--black)99%,var(--grey)5%);
 }
 
 a{
@@ -229,7 +229,7 @@ ul{
 }
 /*video*/
 .intro{
-height: 100%;
+height: 100vh;
 width: 100%;
 position: static;
 z-index: -1;
@@ -245,8 +245,8 @@ h1{
 
 
 #homemain{
-  font-size: 40px;
-  text-align: center; margin-top: -100px; border: none;
+  font-size: 60px;
+  text-align: center; margin-top: -125px; border: none;
   position: absolute;
   font-family: 'VT323', monospace;
 }
@@ -261,7 +261,7 @@ h1 {
   color: var(--green);
   text-align: center;
 }
-#goals {font-size: 28px; font-family: 'Share Tech', sans-serif; width: 90%; text-align: justify;  background:linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+#goals {font-size: 75px; font-family: 'Share Tech', sans-serif; width: 90%; text-align: justify;  background:linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
   background-size: 200% auto;
   
   color: #000;
@@ -272,12 +272,13 @@ h1 {
   
   animation: shine 3s ease alternate infinite;
 	}
+#secondgoal {margin-top: 8px}
 #box {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 95%;
-  height: 200px;
+  height: 95vh;
   font-family: 'Raleway';
   font-size: 2.5rem;
 }
@@ -351,93 +352,47 @@ h1 {
 }
 
 
-/*home3rdsection*/
-#cyberpunkphoto {
-   background-image: url("/cyberpunk.png");
-  background-repeat: no-repeat;
-   height: 200px;
-   width: 100%;
-  margin-top: 10px;
-  background-position: center;
-  background-size: cover ;
-  border-color: var(--black);
-                }
-
-::-webkit-scrollbar{width:2px;height:2px;}
-::-webkit-scrollbar-button{width:2px;height:2px;}
-
-div{
-  box-sizing:border-box;
-}
-
-
-.horizontal-scroll-wrapper{
-  position: relative;
-  display:block;
-  left: -65% ;
-  margin-top: -60px;
-  width:40vh;
-  max-height: 105vw;
-  border: none;
-  background:var(--black);
-  overflow-y:auto;
-  overflow-x:hidden;
-  transform:rotate(-90deg) translateY(-80px);
-  transform-origin:right top;
-}
-.horizontal-scroll-wrapper > div{
-  display:block;
-  
-  background: black;
-  transform:rotate(90deg);
-  transform-origin: right top;
-}
-
-.squares{ top:150px;
-  padding:500px 0 0 0;
+section.horizontal {
+  overflow-x: hidden;
   
 }
 
-.squares > div{
-  width:499px;
-  height:499px;
-  margin: 5px;
+section.horizontal .pin-wrap,
+section.horizontal .animation-wrap {
+    display: flex;
+    position: relative;
+    z-index: 1;  
+    height: 100vh;
+}
+section.horizontal .item {
+    position: relative;
+    padding: 1px 10px ;
+    flex: 0 0 500px;
+    height: 95vh;
+    display: flex;
+    align-items: center;
+    line-height: 1.7;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
 }
 
-.picone img {object-fit: cover
-            width:500px;
-  height:500px;
-             margin: 5px;}
-.pictwo img{object-fit: cover
-            width:500px;
-  height:500px;
-             margin: 5px;}
-.picthree img{object-fit: cover
-            width:500px;
-  height:500px;
-             margin: 5px;}
-.picfour img{object-fit: cover
-            width:500px;
-  height:500px;
-             margin: 5px;}
-.picfive img{object-fit: cover
-            width:500px;
-  height:500px;
-             margin: 5px;}
-.picsix img{object-fit: cover
-            width:500px;
-  height:500px;
-             margin: 5px;}
-.picseven img{object-fit: cover
-            width:500px;
-  height:500px;
-             margin: 5px;}
-.piceight img{object-fit: cover
-            width:500px;
-  height:500px;
-             margin: 5px;}
-
-
+section.horizontal .item:before {
+    position: absolute;
+    font-size: 100px;
+    opacity: .13;
+    font-weight: bold;    
+    z-index: -1;
+    -webkit-transform: translate(-30px, -50px);
+    transform: translate(-30px, -50px);
+    line-height: 1;
+}
+section.horizontal .animation-wrap.to-right {
+    counter-reset: item;
+    float: left;
+}
 
 .containerglass {
   border: none;
