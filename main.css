@@ -382,7 +382,7 @@ section.horizontal .item {
     user-select: none;
     background-color: transparent;
 }
-#mainphotos {width: 100vw; height: 100vh; object-fit: scale-down;}
+#mainphotos {width: 100vw; height: 100vh; object-fit: cover;}
 section.horizontal .item:before {
     position: absolute;
     font-size: 100px;
